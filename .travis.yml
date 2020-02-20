@@ -2,8 +2,8 @@ language: bash
 before_install: sudo apt-get install python-tk
 
 language: python
-python: 3
-install: python3.6 setup -t
+python: 3.6
+install: python setup -t
 
 services:
   - xvfb

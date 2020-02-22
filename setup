@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 
 from os import system, getcwd
@@ -20,11 +20,11 @@ except ImportError:
     print( 'You need to install the python-tk package,'
            +' would you like to do it now?')
     while sel not in ['yes','no','y','n']:
-        sel = raw_input('Please write "yes" or "no": ')
+        sel = input('Please write "yes" or "no": ')
     if sel in ['y','yes']:
         su =''
         while su not in ['yes','no','y','n']:
-            su = raw_input('Do you possess sudo rights?,'
+            su = input('Do you possess sudo rights?,'
                            +' Please answer "yes" or "no": ')
         if su in ['y','yes']:
             system('sudo apt-get install python-tk')

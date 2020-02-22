@@ -13,31 +13,11 @@ if len(argv)>1 and argv[1] == '-t':
     _test_ = True
     
 try:
-    import Tkinter
+    import tkinter
 except ImportError:
-    print( 'Package python-tk not found!')
-    sel = ''
-    print( 'You need to install the python-tk package,'
-           +' would you like to do it now?')
-    while sel not in ['yes','no','y','n']:
-        sel = input('Please write "yes" or "no": ')
-    if sel in ['y','yes']:
-        su =''
-        while su not in ['yes','no','y','n']:
-            su = input('Do you possess sudo rights?,'
-                           +' Please answer "yes" or "no": ')
-        if su in ['y','yes']:
-            system('sudo apt-get install python-tk')
-            exit('\nPlease run again the setup\n' +
-                  '"./GRO2LAM-27ene19/python2 setup"')
-        else:
-            _exit_txt_ += ('Without sudo rights you cannot install tkinter.'
-                           +'\n - Please contact your system administrator\n')
-            _okflag_ = False
-    else:
-        _exit_txt_ += ( 'In order to use GRO2LAM GUI you need to install'
+    _exit_txt_ += ( 'In order to use GRO2LAM GUI you need to install'
                        +' the python-tk package first\n')
-        _okflag_ = False
+    _okflag_ = False
 
 if _okflag_:
     from lib.misc.file import write_xfile, fileseeker, check_file
@@ -118,7 +98,7 @@ if _okflag_:
 if not _okflag_:
     for fi in act_files:
         print( fi)
-    exit(_exit_txt_)
+    exit( _exit_txt_)
 
 if _test_:
     write_xfile('run', _run_t_[0][::-1])

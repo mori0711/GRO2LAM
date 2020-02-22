@@ -15,9 +15,9 @@ if len(argv)>1 and argv[1] == '-t':
 try:
     import Tkinter
 except ImportError:
-    print 'Package python-tk not found!'
+    print( 'Package python-tk not found!')
     sel = ''
-    print ('You need to install the python-tk package,'
+    print( 'You need to install the python-tk package,'
            +' would you like to do it now?')
     while sel not in ['yes','no','y','n']:
         sel = raw_input('Please write "yes" or "no": ')
@@ -43,7 +43,7 @@ if _okflag_:
     from lib.misc.file import write_xfile, fileseeker, check_file
     from lib.misc.warn import green
     from lib.grotolam import __version__
-    print 'Checking instalation files for {}'.format(__version__)
+    print('Checking instalation files for {}'.format(__version__))
     
     commands_container = ['mkdir ./lib/docs','mv README.md ./lib/docs',
                           'mv setup ./lib', 'mv LICENSE ./lib/docs',
@@ -85,7 +85,7 @@ if _okflag_:
     
     # so the we can compare
     if len(files) == len(act_files):
-        print 'File check sum ok!'
+        print ('File check sum ok!')
         fi_o_flag = 1
         _eq_files_ = []
         for _fi_ in act_files:
@@ -94,30 +94,30 @@ if _okflag_:
         for _fi_ in files:
             if _fi_.lstrip('./') in _eq_files_:
                 if check_file('./lib/'+_fi_):
-                    print ('File {} '+green('ok')).format(_fi_)
+                    print('File {} '.format(_fi_) + green('ok') )
                 else:
                     fi_o_flag *= 0
             else:
-                print 'File {} not found'.format(_fi_)
+                print( 'File {} not found'.format(_fi_))
                 fi_o_flag *= 0
                 
         if fi_o_flag:
-            print 'File check done!'
+            print( 'File check done!')
         else:
             _exit_txt_ += 'Warning!! some file not found!\n'
             _okflag_ = False
     else:
         _okflag_ = False
-        print len(files), len(act_files)
+        print( len(files), len(act_files))
         for fi in act_files:
-            print fi
+            print( fi)
         _exit_txt_ += 'Warning!! there is something rare in these files\n'
         
         
         
 if not _okflag_:
     for fi in act_files:
-        print fi
+        print( fi)
     exit(_exit_txt_)
 
 if _test_:

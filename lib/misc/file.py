@@ -30,7 +30,7 @@ def check_file(_in_file_, content = True, string = ''):
         
         if content and su == 0 and string == '':
             pop_wrg_1(' File {} is empty -- '.format(_in_file_))
-        elif string <> '' and content and not strcheck:
+        elif string != '' and content and not strcheck:
             pop_wrg_1(' Section {} not found in file {} -- '.format( string, _in_file_))
         else:
             flag = True
@@ -48,13 +48,13 @@ def check_file_list(files_list, extensions=['*']):
             fi= open (files_list[x],'r')
             fi.close()
             ext= finam.split('.')[-1]
-            if extensions<>['*'] and not ext in extensions:
+            if extensions != ['*'] and not ext in extensions:
                 print extensions
                 print wrg_3(' Invalid format: < '+ext+' >')
                 return False
         return True
     except IOError:
-        if finam== '':
+        if finam == '':
             print wrg_3(" Select a file --- ")
         else: 
             print wrg_3(' No such file or directory: '+ finam)
@@ -134,7 +134,7 @@ def write_file( filename='test.txt', content='', _folder_ = None):
     out_file.write( content)
     out_file.close()
     
-    if _folder_ <> None:
+    if _folder_ != None:
         move_file( filename, _folder_)
     
     
@@ -193,7 +193,7 @@ def fileseeker( path = getcwd(), word = 'data', notw = None):
         # with remove(list_of_files[fs])
         _file_ = list_of_files[fs]
         if '/' in _file_ and word in _file_.split('/')[-1]:
-            if notw <> None and notw in _file_.split('/')[-1]:
+            if notw != None and notw in _file_.split('/')[-1]:
                 pass
             else:
                 files.append( _file_)

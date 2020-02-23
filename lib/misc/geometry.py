@@ -24,7 +24,7 @@ def tensprod(T1, T2):
     #for i in range( c):
     #    print T1[i]
     #print T1[0][0]*T2[0][0] + T1[0][2]*T2[2][0]
-    if len( T2) <> v:
+    if len( T2) != v:
         print('Tensors length')
         pT = [ [], [], []]
     else:
@@ -86,7 +86,7 @@ if __name__ == '__main__':
         Ar[i][i] = tensorvec[i]
         print Ar
         for j in range(3):#.remove(i):
-            if i <> j:
+            if i != j:
                 #
                 Ar[i][j] = tensorvec[k+3]
                 k += 1

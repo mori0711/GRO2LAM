@@ -12,7 +12,7 @@ def ye_deco(func):
 def wrg_3(*text):
     '''  yellow warning scheme'''
     n_text = ''
-    if text <>None:
+    if text != None:
         for line in text[:-1]:
             n_text += line +'\n'
         n_text +=text[-1]
@@ -21,7 +21,7 @@ def wrg_3(*text):
 def wrg_2(*text):
     '''  warning scheme'''
     n_text = ''
-    if text <>None:
+    if text != None:
         for line in text[:-1]:
             n_text += line +'\n'
         n_text +=text[-1]
@@ -30,7 +30,7 @@ def wrg_2(*text):
 def wrg_1(*text):
     '''  warning scheme'''
     n_text = ''
-    if text <>None:
+    if text != None:
         for line in text[:-1]:
             n_text += line +'\n'
         n_text +=text[-1]
@@ -39,7 +39,7 @@ def wrg_1(*text):
 def print_dec_g(*text):
     '''  warning scheme'''
     n_text = ''
-    if text <>None:
+    if text != None:
         for line in text[:-1]:
             n_text += line +'\n'
         n_text +=text[-1]

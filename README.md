@@ -66,7 +66,7 @@ python 3: [![Build Status](https://travis-ci.org/hernanchavezthielemann/GRO2LAM.
    Copyright 2018 Hernan Chavez Thielemann, Annalisa Cardellini, Matteo Fasano, Gianmarco Ciorra, Luca Bergamasco, Matteo Alberghini, Eliodoro Chiavazzo, Pietro Asinari
 
 ## Citation
-   The publication associated with this code is found here: [s00894-019-4011-x]
+   The publication associated with this code is found here: [s00894-019-4011-x]    [![Citations](https://badge.dimensions.ai/badge?style=rectangle&count=2)](https://app.dimensions.ai/details/publication/pub.1113961241)
    
    Hernán Chávez Thielemann, Annalisa Cardellini, Matteo Fasano, Luca Bergamasco, Matteo Alberghini, Gianmarco Ciorra, Eliodoro Chiavazzo, Pietro Asinari. From GROMACS to LAMMPS: GRO2LAM A converter for molecular dynamics software.  Journal of Molecular Modeling (2019) 25: 147.
 

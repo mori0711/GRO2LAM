@@ -1,0 +1,4 @@
+#!/usr/bin/python
+from lib.grotolam import grotolam_launcher
+if __name__ == "__main__":
+    grotolam_launcher()
